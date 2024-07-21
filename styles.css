@@ -52,7 +52,7 @@ body {
 .container {
   text-align: center;
   padding: 2rem;
-  background: rgba(254, 254, 254, 0.5); /* Light container background */
+  background: rgba(254, 254, 254, 1); /* Light container background */
   color: #222222; /* Dark text */
   border-radius: 20px;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
