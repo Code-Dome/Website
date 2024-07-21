@@ -1,0 +1,338 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: #222222; /* Dark background */
+    color: #fefefe; /* Light text */
+    margin: 0;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+  }
+  
+  .shimmer-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /*need to adjust for mobile*/
+    height: 100%;
+    overflow: hidden;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+    animation: shimmer 6s infinite linear;
+  }
+  
+  .shimmer1 {
+    animation: shimmer 8s infinite linear reverse;
+  }
+  
+  .shimmer2 {
+    animation: shimmer 10s infinite linear;
+  }
+  
+  .shimmer3 {
+    animation: shimmer 12s infinite linear reverse;
+  }
+  
+  @keyframes shimmer {
+    0% {
+      transform: translate(-100%, -100%) rotate(45deg);
+    }
+    100% {
+      transform: translate(100%, 100%) rotate(45deg);
+    }
+  }
+  
+  .container {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(7, 173, 146, 1); /* Dark container background */
+    color: #fefefe; /* Light text */
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    width: 90%;
+    margin: 0 1rem; /* Ensure some margin for small screens */
+  }
+  
+  .logo {
+    animation: fadeInUp 1s ease-out;
+  }
+  
+  .logo img {
+    width: 150px; /* Adjust size as needed */
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  input[type="email"] {
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 0.5rem;
+    text-align: center; /* Center the placeholder text */
+    flex: 1;
+  }
+  
+  button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    background-color: #186579; /* Dark button background */
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 0.5rem; /* Ensure it aligns well with the input */
+  }
+  
+  button:hover {
+    background-color: #134E64; /* Dark button background on hover */
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  #social-icons {
+    margin-top: 1.5rem;
+  }
+  
+  .social-icon {
+    display: inline-block;
+    font-size: 1.5rem;
+    color: #fefefe; /* Dark theme button color */
+    margin: 0 10px;
+    transition: transform 0.3s;
+  }
+  
+  .social-icon:hover {
+    transform: translateY(-3px);
+  }
+  
+  /* Toggle Button Styles */
+  #toggle-theme {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #134E64; /* Dark toggle icon color */
+    z-index: 10;
+  }
+  
+  /* Light Theme */
+  body.light-mode {
+    background-color: #f0f0f0; /* Light background with a slight gray shade */
+    color: #222222; /* Dark text */
+  }
+  
+  /* Light Theme Shimmer Adjustment */
+  body.light-mode .shimmer-background {
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.05)); /* Slight shimmer effect for light theme */
+  }
+  
+  /* Light Theme Container Background Adjustment */
+  body.light-mode .container {
+    color: #222222; /* Dark text */
+    background: rgba(254, 254, 254, 0.5); /* Light container background */
+  }
+  
+  /* Light Theme Form Button Adjustment */
+  body.light-mode button {
+    background-color: #07AD92; /* Light button background */
+  }
+  
+  /* Light Theme Social Icons Adjustment */
+  body.light-mode .social-icon {
+    color: #07AD92; /* Light theme button color */
+  }
+  
+  /* Light Theme Toggle Button Adjustment */
+  body.light-mode #theme-icon {
+    color: #134E64; /* Dark toggle icon color */
+  }
+  
+  /* Footer Styles */
+  .footer {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fefefe; /* Light text */
+    justify-content: center;
+    align-content: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  body.light-mode .footer {
+    background-color: #f0f0f0; /* Light footer background */
+    color: #222222; /* Dark text */
+  }
+  
+  /* Confetti Animation */
+  #confetti-canvas {
+    position: fixed;
+    pointer-events: none;
+    z-index: 1000; /* Ensure it's above other content */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .toast {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 1rem;
+    background-color: #186579; /* Dark button background */
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Ensure it's above other content */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .toast.show {
+    opacity: 1;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    .container {
+      padding: 1rem;
+      margin: 0 1rem; /* Ensure some margin for small screens */
+    }
+    h1 {
+      font-size: 2rem;
+    }
+    p {
+      font-size: 1rem;
+    }
+    form {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    input[type="email"] {
+        border-radius: 5px;
+        margin-bottom: 1rem;
+        text-align: center; /* Center the placeholder text */
+        flex: 1;
+        width: 100%;
+        max-width: none; /* Remove max-width on smaller screens */
+      }
+    button {
+      border-radius: 5px;
+      width: 100%;
+      margin-bottom: 1rem;
+      flex: 1;
+    }
+    .shimmer-background {
+        width: 25%;
+    }   
+  }
+  
+  /* Floating Navbar Styles */
+.floating-navbar {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8); /* Dark background for the navbar */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  padding: 10px;
+}
+
+.floating-navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 15px; /* Space between navbar items */
+}
+
+.floating-navbar li {
+  margin: 0;
+}
+
+.floating-navbar a {
+  color: #fefefe; /* Light text color */
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.floating-navbar a:hover {
+  color: #07AD92; /* Highlight color on hover */
+}
+
+/* Light Theme Adjustments */
+body.light-mode .floating-navbar {
+  background-color: rgba(255, 255, 255, 0.9); /* Light background for the navbar */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .floating-navbar a {
+  color: #222222; /* Dark text color in light mode */
+}
+
+body.light-mode .floating-navbar a:hover {
+  color: #07AD92; /* Highlight color on hover remains the same */
+}
+
+@media (max-width: 768px) {
+  .floating-navbar {
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 5px;
+  }
+
+  .floating-navbar ul {
+      flex-direction: column;
+      gap: 10px; /* Space between navbar items on smaller screens */
+  }
+
+  .floating-navbar a {
+      font-size: 0.9rem;
+  }
+}
