@@ -1,0 +1,14 @@
+/* Preloader.css */
+@keyframes colorizeLogo {
+    0% {
+      filter: grayscale(100%);
+    }
+    100% {
+      filter: grayscale(0%);
+    }
+  }
+  
+  .animate-colorizeLogo {
+    animation: colorizeLogo 3s forwards; /* Adjust time as needed */
+  }
+  
