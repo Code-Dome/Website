@@ -1,4 +1,3 @@
-import React from 'react';
 import { TeamMember } from '../../data/team';
 
 export default function TeamMemberCard({ name, role, image, bio }: TeamMember) {

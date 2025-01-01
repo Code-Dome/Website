@@ -1,4 +1,8 @@
 import { LucideIcon, Smartphone, Globe, ShoppingCart, Briefcase, Building2, Laptop } from 'lucide-react';
+import Digiceipt1 from '../../digiceipt-1.png'
+import Digiceipt2 from '../../digiceipt-2.png'
+import Digiceipt3 from '../../digiceipt-3.png'
+import DigiceiptLogo from '../../digiceipt-logo.png'
 
 export interface Project {
   title: string;
@@ -19,7 +23,7 @@ export const projects: Project[] = [
   {
     title: "Digiceipt",
     description: "A digital receipt management software.",
-    image: "./digiceipt-logo.png",
+    image: DigiceiptLogo,
     category: "Web Application",
     icon: Globe,
     details: {
@@ -28,9 +32,9 @@ export const projects: Project[] = [
       impact: "Reduce the amount of physical paper receipts needed for industries like truck washes.",
       technologies: ["React", "Typescript", "MongoDB", "Netlify", "Supabase"],
       gallery: [
-        "./digiceipt-1.png",
-        "./digiceipt-2.png",
-        "./digiceipt-3.png",
+        Digiceipt1,
+        Digiceipt2,
+        Digiceipt3,
       ]
     }
   },

@@ -1,5 +1,6 @@
 import SocialLinks from './SocialLinks';
 import FooterLinks from './FooterLinks';
+import Logo from "../../../flat_logo_xl.png"
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -10,7 +11,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-2 gap-12 mb-8">
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <img src="./flat_logo_xl.png" className="h-8 w-8" />
+              <img src={Logo} className="h-8 w-8" />
               <span className="font-bold text-xl text-[#144E64]">Code Dome</span>
             </div>
             <p className="text-[#176577] mb-6 max-w-md">

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Project } from '../../data/projects';
 import Modal from '../shared/Modal';
 import ProjectModal from './ProjectModal';
