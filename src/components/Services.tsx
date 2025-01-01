@@ -1,5 +1,4 @@
-import React from 'react';
-import { Code, Database, CloudIcon, Smartphone, Shield, GitBranch } from 'lucide-react';
+import { Code, CloudIcon, Smartphone } from 'lucide-react';
 import ServiceCard from './ServiceCard';
 
 const services = [

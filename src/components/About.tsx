@@ -9,7 +9,7 @@ export default function About() {
           <div>
           <div className="font-sans p-10 max-w-4xl mx-auto">
           <header className="flex items-center mb-10">
-            <div className="text-2xl font-bold mr-5 font-['Arial_Black']"><img width="40px" height="40px" src="../../../flat_logo_xl.png" /></div>
+            <div className="text-2xl font-bold mr-5 font-['Arial_Black']"><img width="40px" height="40px" src="./flat_logo_xl.png" /></div>
             <div><h1 className="text-3xl font-semibold"><a href="/">Code Dome</a></h1></div>
           </header>
     

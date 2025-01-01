@@ -1,5 +1,5 @@
 // Preloader.tsx
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import '../preloader.css';  // Import your CSS file for animation
 
 export default function Preloader() {
@@ -18,7 +18,7 @@ export default function Preloader() {
         <div className="preloader flex justify-center items-center fixed top-0 left-0 w-full h-full bg-white z-50">
         <div className="logo-container flex justify-center items-center">
           <img
-            src="../../logo.svg"  // Replace with your logo path
+            src="./logo.svg"  // Replace with your logo path
             alt="Code Dome Logo"
             className="logo w-36 h-auto grayscale animate-colorizeLogo"  // Tailwind classes for styling and animation
           />

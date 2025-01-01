@@ -19,7 +19,7 @@ export const projects: Project[] = [
   {
     title: "Digiceipt",
     description: "A digital receipt management software.",
-    image: "./src/projects/digiceipt-logo.png",
+    image: "./digiceipt-logo.png",
     category: "Web Application",
     icon: Globe,
     details: {
@@ -28,9 +28,9 @@ export const projects: Project[] = [
       impact: "Reduce the amount of physical paper receipts needed for industries like truck washes.",
       technologies: ["React", "Typescript", "MongoDB", "Netlify", "Supabase"],
       gallery: [
-        "./src/projects/digiceipt-1.png",
-        "./src/projects/digiceipt-2.png",
-        "./src/projects/digiceipt-3.png",
+        "./digiceipt-1.png",
+        "./digiceipt-2.png",
+        "./digiceipt-3.png",
       ]
     }
   },
