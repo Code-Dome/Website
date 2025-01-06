@@ -1,4 +1,3 @@
-import { Link } from '@tanstack/react-router';
 import { Menu } from 'lucide-react';
 import Logo from "../../flat_logo_xl.png"
 import { useState } from 'react';
@@ -13,7 +12,7 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center space-x-2">
             <img src={Logo} className="h-8 w-8" />
-            <Link href="/"> <span className="font-bold text-xl text-[#144E64]">Code Dome</span></Link>
+            <a href="/"> <span className="font-bold text-xl text-[#144E64]">Code Dome</span></a>
           </div>
           <div className="hidden md:flex items-center space-x-8">
             <a href="#services" className="text-[#176577] hover:text-[#144E64]">Services</a>

@@ -1,4 +1,3 @@
-import { Link } from '@tanstack/react-router';
 import { ArrowRight } from 'lucide-react';
 
 export default function Hero() {
@@ -14,18 +13,18 @@ export default function Hero() {
               We transform ideas into powerful digital solutions. Our expert team crafts custom software that drives business growth and innovation.
             </p>
             <div className="flex space-x-4 justify-center">
-            <Link href="#contact">
+            <a href="#contact">
               <button className="bg-[#144E64] text-white px-8 py-3 rounded-lg hover:bg-[#176577] flex items-center">
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
-              </Link>
+              </a>
 
-              <Link href="#services">
+              <a href="#services">
               <button className="border-2 border-[#144E64] text-[#144E64] px-8 py-3 rounded-lg hover:bg-[#71D9C7]/10">
                 Learn More
               </button>
-              </Link>
+              </a>
             </div>
           </div>
         </div>

@@ -1,4 +1,3 @@
-import { Link } from '@tanstack/react-router';
 import { X } from 'lucide-react';
 
 interface MobileMenuProps {
@@ -12,7 +11,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
   return (
     <>
       <div className="fixed inset-0 bg-black/50 z-40" onClick={onClose} />
-      <div className="fixed inset-0 z-50">
+      <div className="fixed inset-0 z-[100]">
         <div className="absolute inset-y-0 right-0 w-full bg-white">
           <div className="p-6">
             <div className="flex justify-end">
