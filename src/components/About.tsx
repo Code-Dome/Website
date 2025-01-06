@@ -1,5 +1,6 @@
 import Navbar from "./Navbar";
 import Logo from "../../flat_logo_xl.png"
+import { Link } from "react-router-dom";
 
 export default function About() {
     return (<>
@@ -11,7 +12,7 @@ export default function About() {
           <div className="font-sans p-10 max-w-4xl mx-auto">
           <header className="flex items-center mb-10">
             <div className="text-2xl font-bold mr-5 font-['Arial_Black']"><img width="40px" height="40px" src={Logo} /></div>
-            <div><h1 className="text-3xl font-semibold"><a href="/">Code Dome</a></h1></div>
+            <div><h1 className="text-3xl font-semibold"><Link to="/">Code Dome</Link></h1></div>
           </header>
     
           <h1 className="text-4xl font-bold mb-5">About Us</h1>

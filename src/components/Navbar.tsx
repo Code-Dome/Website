@@ -2,6 +2,7 @@ import { Menu } from 'lucide-react';
 import Logo from "../../flat_logo_xl.png"
 import { useState } from 'react';
 import MobileMenu from './MobileMenu';
+import { Link } from 'react-router-dom';
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -12,16 +13,16 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center space-x-2">
             <img src={Logo} className="h-8 w-8" />
-            <a href="/"> <span className="font-bold text-xl text-[#144E64]">Code Dome</span></a>
+            <Link to="/"> <span className="font-bold text-xl text-[#144E64]">Code Dome</span></Link>
           </div>
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#services" className="text-[#176577] hover:text-[#144E64]">Services</a>
-            <a href="#work" className="text-[#176577] hover:text-[#144E64]">Our Work</a>
-            <a href="#team" className="text-[#176577] hover:text-[#144E64]">Team</a>
+            <Link to="#services" className="text-[#176577] hover:text-[#144E64]">Services</Link>
+            <Link to="#work" className="text-[#176577] hover:text-[#144E64]">Our Work</Link>
+            <Link to="#team" className="text-[#176577] hover:text-[#144E64]">Team</Link>
             <button className="bg-[#144E64] text-white px-4 py-2 rounded-lg hover:bg-[#176577]">
-              <a href='#contact'>
+              <Link to='#contact'>
                 Contact Us
-              </a>
+              </Link>
             </button>
           </div>
           

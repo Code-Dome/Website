@@ -1,4 +1,5 @@
 import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function Hero() {
   return (
@@ -13,18 +14,18 @@ export default function Hero() {
               We transform ideas into powerful digital solutions. Our expert team crafts custom software that drives business growth and innovation.
             </p>
             <div className="flex space-x-4 justify-center">
-            <a href="#contact">
+            <Link to="#contact">
               <button className="bg-[#144E64] text-white px-8 py-3 rounded-lg hover:bg-[#176577] flex items-center">
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
-              </a>
+              </Link>
 
-              <a href="#services">
+              <Link to="#services">
               <button className="border-2 border-[#144E64] text-[#144E64] px-8 py-3 rounded-lg hover:bg-[#71D9C7]/10">
                 Learn More
               </button>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
