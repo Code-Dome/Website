@@ -9,14 +9,14 @@ export default function Preloader() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);  // Set loading to false after 3 seconds (adjust as needed)
-    }, 300);
+    }, 800);
 
     return () => clearTimeout(timer); // Clean up the timer on component unmount
   }, []);
 
   return (
     isLoading && (
-        <div className="preloader flex justify-center items-center fixed top-0 left-0 w-full h-full bg-white z-50">
+        <div className="preloader flex justify-center items-center fixed top-0 left-0 w-full h-full bg-white z-[100]">
         <div className="logo-container flex justify-center items-center">
           <img
             src={Logo} 
