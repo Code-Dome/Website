@@ -1,3 +1,5 @@
+import BrandonAvatar from "../../brandon_avatar.png"
+
 export interface TeamMember {
   name: string;
   role: string;
@@ -33,7 +35,7 @@ export const team: TeamMember[] = [
   {
     name: "Brandon-Lee Schultz",
     role: "Founder",
-    image: "../../brandon_avatar.png",
+    image: BrandonAvatar,
     bio: "Software Engineer"
   }
 ];
