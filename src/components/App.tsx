@@ -12,17 +12,19 @@ import PrivacyPolicy from "./PrivacyPolicy";
 import Tos from "./Tos";
 import Cookies from "./Cookies";
 import { useEffect, useState } from "react";
+import ScrollToTop from "./ScrollToTop";
 
 export default function App() {
 
-const [isLoading, setIsLoading] = useState<boolean>(true);
+    const [isLoading, setIsLoading] = useState<boolean>(true);
 
-  useEffect(() => {
-    const timer = setTimeout(() => setIsLoading(false), 800); // Simulate loading
-    return () => clearTimeout(timer);
-  }, []);
-  
+    useEffect(() => {
+        const timer = setTimeout(() => setIsLoading(false), 800); // Simulate loading
+        return () => clearTimeout(timer);
+    }, []);
+
     return (<BrowserRouter>
+        <ScrollToTop />
         <Routes>
             <Route
                 path="/"
