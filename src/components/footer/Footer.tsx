@@ -27,13 +27,13 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-[#176577]">
               © {currentYear} Code Dome. All rights reserved.
-              <div>
-              <small>v{Version.version}</small>
-              </div>
             </p>
             <p className="text-[#176577]">
               Made with 💚 in Durban, South Africa
             </p>
+          </div>
+          <div className="flex flex-col md:flex-row justify-between items-center pt-4 text-gray-500">
+          <code>v{Version.version}</code>
           </div>
         </div>
       </div>

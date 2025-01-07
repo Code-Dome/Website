@@ -1,5 +1,4 @@
 import { X } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -21,18 +20,18 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
               </button>
             </div>
             <div className="mt-8 flex flex-col space-y-8 items-center">
-              <Link to="#services" onClick={onClose} className="text-lg text-[#176577] hover:text-[#144E64]">
+              <a href="#services" onClick={onClose} className="text-lg text-[#176577] hover:text-[#144E64]">
                 Services
-              </Link>
-              <Link to="#work" onClick={onClose} className="text-lg text-[#176577] hover:text-[#144E64]">
+              </a>
+              <a href="#work" onClick={onClose} className="text-lg text-[#176577] hover:text-[#144E64]">
                 Our Work
-              </Link>
-              <Link to="#team" onClick={onClose} className="text-lg text-[#176577] hover:text-[#144E64]">
+              </a>
+              <a href="#team" onClick={onClose} className="text-lg text-[#176577] hover:text-[#144E64]">
                 Team
-              </Link>
-              <Link to="#contact" onClick={onClose} className="text-lg bg-[#144E64] text-white px-6 py-2 rounded-lg hover:bg-[#176577]">
+              </a>
+              <a href="#contact" onClick={onClose} className="text-lg bg-[#144E64] text-white px-6 py-2 rounded-lg hover:bg-[#176577]">
                 Contact Us
-              </Link>
+              </a>
             </div>
           </div>
         </div>
