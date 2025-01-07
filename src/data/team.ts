@@ -33,7 +33,7 @@ export const team: TeamMember[] = [
   {
     name: "Brandon-Lee Schultz",
     role: "Founder",
-    image: "https://media.licdn.com/dms/image/v2/D5603AQH4EAiT7G9R1g/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1690904117954?e=2147483647&v=beta&t=TSb4hK0obRk1VpPxkcf-EtH2skjz5Kn2NcV4gLUqwvk",
+    image: "../../brandon_avatar.png",
     bio: "Software Engineer"
   }
 ];
