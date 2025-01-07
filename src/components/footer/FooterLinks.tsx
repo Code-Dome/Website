@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const links = {
   Company: [
     { label: 'About', href: '/about' },
@@ -21,12 +23,12 @@ export default function FooterLinks() {
           <ul className="space-y-2">
             {items.map(({ label, href }) => (
               <li key={label}>
-                <a
-                  href={href}
+                <Link
+                  to={href}
                   className="text-[#176577] hover:text-[#09AE92] transition-colors"
                 >
                   {label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
