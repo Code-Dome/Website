@@ -11,8 +11,17 @@ import About from "./About";
 import PrivacyPolicy from "./PrivacyPolicy";
 import Tos from "./Tos";
 import Cookies from "./Cookies";
+import { useEffect, useState } from "react";
 
 export default function App() {
+
+const [isLoading, setIsLoading] = useState<boolean>(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsLoading(false), 800); // Simulate loading
+    return () => clearTimeout(timer);
+  }, []);
+  
     return (<BrowserRouter>
         <Routes>
             <Route
@@ -20,7 +29,7 @@ export default function App() {
                 element={
                     <>
                         <div>
-                            <Preloader />
+                            <Preloader loading={isLoading} />
                             <div className="min-h-screen bg-white">
                                 <Navbar />
                                 <Hero />

@@ -33,7 +33,7 @@ export const team: TeamMember[] = [
   {
     name: "Brandon-Lee Schultz",
     role: "Founder",
-    image: "./assets/brandon_avatar.png",
+    image: "../../brandon_avatar.png",
     bio: "Software Engineer"
   }
 ];
